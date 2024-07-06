@@ -1,1 +1,2 @@
 "# JS-Practice" 
+"# Javascript-Practice" 
