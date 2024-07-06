@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Alphanumeric String</title>
+</head>
+<body>
+    <!-- Write a function that generates a random alphanumeric string of a given length. -->
+    <h2>Random Alphanumeric String</h2>
+    <script>
+       function randomAlphanumericString(length)
+       {
+          let characters='ABCDEFGHIJKLMNOzPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+          let result='';
+          for(let i=0;i<length;i++)
+          {
+            let randomText= Math.floor(Math.random()*characters.length);
+            result+=characters.charAt(randomText);
+          }
+          console.log(result);
+       }
+       randomAlphanumericString(2);
+       randomAlphanumericString(4);
+    </script>
+</body>
+</html>

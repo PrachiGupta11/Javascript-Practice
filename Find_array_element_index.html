@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find array element index</title>
+</head>
+<body>
+    <!-- Implement a function that finds the index of a specific element in an array. If the element is not found, the function should return -1. -->
+    <h2>Find Array element index</h2>
+    <script>
+        function arrayIndex(arr,element)
+        {
+            console.log("Given array",arr)
+            console.log("searching element",element)
+           for(let i=0;i<arr.length;i++)
+           {
+             if(arr[i]===element)
+             {
+                return "index of element is "+i;
+             }
+           }
+           return -1;
+        }
+        console.log(arrayIndex([21,52,75,36,65],36));
+        console.log(arrayIndex([21,52,75,36,65],65));
+        console.log(arrayIndex([21,52,75,36,65],3));
+        console.log(arrayIndex(["Hi","hello","Hallo","Namaste"],"Hallo"));
+    </script>
+</body>
+</html>

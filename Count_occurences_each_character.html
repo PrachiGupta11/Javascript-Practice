@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count occurrences of each character in string</title>
+</head>
+<body>
+    <!-- Given a string, write a function to count the occurrences of each character in the string. -->
+    <h2>Count occurrences of each character in string</h2>
+    <script>
+        function countCharacter(str)
+        {
+            console.log("Given String",str)
+            for(let i=0;i<str.length;i++)
+            {
+                count=0;
+               for(let j=0;j<str.length;j++)
+               {
+                  if(str[i]==str[j])
+                  {
+                    count++;
+                  }
+               }
+               console.log(str[i],count)
+            }
+        }
+        countCharacter("geet");
+        countCharacter("boss");
+        countCharacter("prachi");
+    </script>
+</body>
+</html>

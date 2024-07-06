@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Revision</h2>
+    <script>
+   // **dynamic typed language**
+
+// let a=10
+// console.log(a);
+//  a="hi"
+// console.log(a);
+// a=[1,4,4,5]
+// console.log(a);
+
+//**hoisting**
+
+// a=10;
+// console.log(a);
+// var a;
+
+// a=10;
+// console.log(a);
+// const a;       // give reference error & temporal dead zone
+
+// a=10;
+// console.log(a);
+// let a;             // give reference error & temporal dead zone
+
+//**closure**
+
+// function closure()
+// {
+//     let count=0
+//     return function()
+//     {
+//         count++;
+//         return count;
+//     }
+// }
+// const counter=closure();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// const counter2=closure();
+
+// console.log(counter2());
+// console.log(counter2());
+// console.log(counter2());
+
+// **callback**
+
+// function sum(num1,num2,callback)
+// {
+//     let add=num1+num2;
+//     callback(add);
+// }
+// function called(result)
+// {
+//     console.log("sum of two numbers are:",result)
+// }
+// sum(1,2,called)
+// sum(4,2,called)
+
+// **promise**
+
+// const promise=new Promise((resolve,reject)=>
+// {
+//     setTimeout(()=>
+//     {
+//         let success=false;
+//         if(success)
+//         {
+//             resolve("promise is Resolved")
+//         }
+//         else{
+//             reject("promise is Rejected")
+//         }
+//     },3000);
+// })
+
+// promise.then((message)=>
+// {
+//     console.log(message)
+// }).catch((error)=>{
+//     console.log(error)
+// })
+
+
+//**rest parameter**
+
+// function rest(a,b,...n)
+// {
+//     console.log(a);
+//     console.log(b);
+//     console.log(n);
+// }
+// rest(1,2,3,4,5,6,7,"hi")
+
+
+//**spread operator**
+
+// function spreadOperator(arr1,arr2)
+// {
+//     let arr=[...arr1,...arr2];
+//     console.log(arr)
+// }
+// spreadOperator([1,2,3,4],[8,9,7,5])
+// spreadOperator(["namaste"],["hello"])
+
+//**Generator function**
+
+// function* gen()
+// {
+//     yield 1;
+//     yield 2;
+// }
+// const generator=gen();
+// console.log(generator.next().value)   //output:1
+// console.log(generator.next().value)   //output:2
+// console.log(generator.next().value)   //output:undefined (because there's no more yield left)
+
+
+//**object destructuring**
+
+// const object={
+//     fullname:"prachi",
+//     city:"delhi"
+// }   
+// const {fullname:name,city:state}=object
+// console.log(name,state);
+
+
+//**array destructuring**
+
+// const arr=[1,2,3,4]
+// const [first,second,third,fourth]=arr
+// console.log(first)
+// console.log(second)
+// console.log(third)
+// console.log(fourth)
+
+
+//**pass by value**
+
+// function passByValue(a) 
+// {
+//  a=1
+// console.log("Inside function:",a)
+// }
+// let b=12
+// console.log("Before function execution:",b)
+// passByValue(b)
+// console.log("After function execution:",b)
+
+
+//**pass by reference**
+
+// function passByReference(obj)
+// {
+//      obj.name="Prachi";
+//     console.log("Inside function execution:",obj)
+// }
+// let person={
+//     name:"Bob"
+// }
+// console.log("Before function execution:",person)
+// passByReference(person);
+// console.log("After function execution:",person)
+
+
+//**Async/Await**
+
+// function fetchData()
+// {
+//     return new Promise((resolve)=>{
+//         setTimeout(()=>{
+//             resolve("resolved")
+//         },2000)
+//     })
+// }
+// async function fetchDataAsync()
+// {
+//     try{
+//     const data=await fetchData();    
+//     console.log(data)
+//     }
+//     catch(error){
+//         console.log(error)
+//     }
+// }
+// fetchDataAsync()
+
+
+//**bracket notation**
+
+// obj={
+//     "full name":"prachi"
+// }
+// let a=obj["full name"]
+// console.log(a)
+
+//**create a function that will print hello world 3 times with each interval of 1 second and interval will be stopped after printing hello world 3 times**
+
+function interval()
+{
+    let count=0;
+    let interValid=setInterval(()=>
+    {
+        count++;
+        console.log("hello world")
+        if(count===3)
+        {
+            clearInterval(interValid)
+            console.log("Interval is stopped")
+        }
+    },1000)
+}
+interval()
+    </script>
+</body>
+</html>

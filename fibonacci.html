@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <!-- Write a JavaScript function that returns the Fibonacci sequence up to a given number of terms. -->
+    <h2>Fibonacci series</h2>
+    <script>
+        function fibonacci(num)
+        {
+           let num1=0;
+           let num2=1;
+           let fab=0;
+           console.log("Fibonacci Series:");
+           console.log(num1);
+           console.log(num2);
+           fab=num1+num2;
+           while(fab<=num)
+           {
+             console.log(fab);
+             num1=num2;
+             num2=fab;
+             fab=num1+num2;
+           }
+        }
+        fibonacci(10);
+        fibonacci(30);
+    </script>
+</body>
+</html>

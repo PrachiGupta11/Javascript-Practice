@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams</title>
+</head>
+<body>
+    <!-- Determine if two strings are anagrams (contain the same characters with the same frequency).
+	Input =. “Listen” , “silent”
+	output true                  -->
+    <h2>Anagrams</h2>
+    <script>
+        function anagrams(str1,str2)
+        {
+           let normalizedStr1=str1.toLowerCase().split('').sort().join('');
+           let normalizedStr2=str2.toLowerCase().split('').sort().join('');
+           console.log(normalizedStr1)
+           console.log(normalizedStr2)
+           return normalizedStr1===normalizedStr2;
+        }
+        console.log(anagrams("Listen","silent"))
+        console.log(anagrams("Hello","silent"))
+    </script>
+</body>
+</html>

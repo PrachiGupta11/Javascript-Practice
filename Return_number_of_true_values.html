@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return number of true values</title>
+</head>
+<body>
+    <!-- Create a function which returns the number of true values there are in an array. -->
+    <h2>Returns number of true values</h2>
+    <script>
+        function trueValues(arr)
+        {
+            console.log("given array",arr);
+          for(let i=0;i<arr.length;i++)
+          {
+            let count=0;
+            for(let j=0;j<arr.length;j++)
+            {
+                if(arr[j]==="true")
+                {
+                    count++;
+                }
+            }
+            console.log("Number of true values in array:",count);
+          }
+        }
+        trueValues(["true","true","false","true","false"]);
+        trueValues(["true","true","false","false","false"]);
+        trueValues(["true","true","true","true","true"]);
+        trueValues(["false","false","false","false","false"]);
+    </script>
+</body>
+</html>

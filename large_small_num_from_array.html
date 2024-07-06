@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large and Small Number from array</title>
+</head>
+<body>
+    <!-- Given an array of numbers, write a function to find the largest and smallest numbers in the array. -->
+    <h2>Large and Small Number from Array</h2>
+    <script>
+        function LargeSmallNum(arr)
+        {
+           let large=arr[0],small=arr[0];
+           for(let i=0;i<=arr.length;i++)
+           {
+              if(large<arr[i])
+              {
+                large=arr[i];
+              }
+              if(small > arr[i])
+              {
+                small=arr[i];
+              }
+           }
+           console.log("Large number from Array:",large);
+           console.log("Small number from Array:",small);
+        }
+        LargeSmallNum([45,32,85,10,5,65,9]);
+        LargeSmallNum([45,2,85,10,5,65,90]);
+    </script>
+</body>
+</html>

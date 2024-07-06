@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add element at the beginning</title>
+</head>
+<body>
+    <!-- Adding element at the beginning of an array using array method. -->
+    <h2>Add element at the beginning of the array using array method</h2>
+    <script>
+        function addElementAtBeginning(arr,element)
+        {
+           console.log("given array",arr);
+           console.log("Element to be add at the beginning:",element)
+           arr.splice(0,0,element);
+           console.log("updated array",arr);
+        }
+        addElementAtBeginning([45,21,25,46,15,95,75],2);
+        addElementAtBeginning(["hi","hello","hallo"],"namaste")
+    </script>
+</body>
+</html>

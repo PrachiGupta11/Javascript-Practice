@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort array in ascending order</title>
+</head>
+<body>
+    <!-- Write a function that sorts an array of numbers in ascending order. -->
+    <h2>sort array in ascending order</h2>
+    <script>
+        function ascendingOrder(arr)
+        {
+            let temp=0;
+            console.log("Given array:",arr)
+            for(let i=0;i<arr.length;i++)
+            {
+                for(let j=i;j<arr.length;j++)
+                {
+                    if(arr[i]>arr[j])
+                    {
+                       temp=arr[i];
+                       arr[i]=arr[j]
+                       arr[j]=temp; 
+                    }
+                }
+                console.log(arr[i])
+            }
+        }
+        ascendingOrder([10,5,9,85,32,1])
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+</head>
+
+<body>
+    <!-- Write a JavaScript function to check if a given number is prime. -->
+    <h2>Prime Number</h2>
+    <script>
+        function prime(num) {
+            let isPrime = true;
+            if (num === 1) {
+                console.log("Given Number " + num + " is niether prime number nor a composite number");
+            }
+            else if (num > 1) {
+                for (let i = 2; i < num; i++) {
+                    if (num % i === 0) {
+                        isPrime=false;
+                        break;
+                    }
+                }
+                        if(isPrime)
+                        {
+                            console.log("Given Number " + num + " is prime number");
+                        }
+                        else{
+                            console.log("Given Number " + num + " is not prime number");
+                        }
+                    }
+                    else {
+                        console.log("Given Number " + num + " is not prime number")
+                    }
+                }
+        prime(1);
+        prime(7);
+        prime(4);
+        prime(15);
+        prime(51);
+        prime(91);
+        prime(47);
+    </script>
+</body>
+
+</html>

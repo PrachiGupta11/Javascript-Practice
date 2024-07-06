@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last word length from string</title>
+</head>
+<body>
+    <!-- Given a string s consisting of words and spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only. -->
+    <h2>Last word length from string</h2>
+    <script>
+        function lastWordLength(str)
+        {
+          arr=str.trim().split(' ').filter(word=>word.length>0)
+          console.log(arr);  
+        //   for(let i=0;i<arr.length;i++)
+        if(arr.length===0)
+          {
+        //     let lastWord= arr[arr.length-1]
+        //   console.log(lastWord.length)
+            return 0;
+          }
+          let lastWord= arr[arr.length-1]
+          console.log("Last word: "+lastWord+", length:"+lastWord.length)
+        }
+        lastWordLength("Hello World")
+        lastWordLength("Hello Prachi")
+        lastWordLength("Hello User")
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse order Sentence words</title>
+</head>
+<body>
+    <!-- Write a function that reverses the order of words in a sentence without using the built-in reverse() method. -->
+    <h2>Reverse order sentence words</h2>
+    <script>
+        function reverseWords(sentence)
+        {
+          let revWords=" "
+          arr=sentence.split(' ');
+          console.log(arr);
+          for(let i=arr.length-1;i>=0;i--)
+          {
+            revWords += arr[i]+" ";
+          }
+          console.log(revWords);
+        }
+        reverseWords("My Name is Prachi");
+        reverseWords("Welcome to code world");
+        reverseWords("Tu pagal Hai");
+    </script>
+</body>
+</html>

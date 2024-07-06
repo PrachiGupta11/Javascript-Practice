@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Small number from array</title>
+</head>
+<body>
+    <!-- Implement a function that finds the second smallest element in an array of integers. -->
+    <h2>Second small number from array</h2>
+    <script>
+        function secondSmall(arr)
+        { 
+          let temp=0;
+          console.log("Given array:",arr);
+          for(let i=0;i<arr.length;i++)
+          {
+            for(let j=i;j<arr.length;j++)
+            {
+              if(arr[i]>arr[j])
+              {
+                temp=arr[i];
+                arr[i]=arr[j]
+                arr[j]=temp;
+              }
+            }
+            
+          }
+          console.log("sorted array:",arr)
+          console.log("second smallest number:",arr[1])
+        }
+        secondSmall([1,45,6,78,65,3]);
+        secondSmall([10,1,2,45,6,78,5,3]);
+    </script>
+</body>
+</html>

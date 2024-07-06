@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Max Number</title>
+</head>
+<body>
+    <!-- Write a JavaScript program to find the maximum number in an array. -->
+    <h2>Array Maximum Number</h2>
+    <script>
+       function Max_num(arr)
+       {
+        let max=0;
+          for(let i=0;i<arr.length;i++)
+          {
+            max=arr[0];
+            if(max<arr[i])
+            {
+                max=arr[i]
+            }
+          }
+          console.log("Given array is:",arr);
+          console.log("Maximum number is:",max);
+       }
+       Max_num([12,52,75,1,5,96])
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First non-repeated characters</title>
+</head>
+<body>
+    <!-- Identify the first character in a string that does not repeat elsewhere.
+	Input = programming
+	Output = p             -->
+    <h2>First non-repeated characters</h2>
+    <script>
+        function nonRepeatedCharacter(str)
+        {
+            let charCount={}
+
+            console.log("Given string:",str)
+           for(let i=0;i<str.length;i++)
+           {
+              let char=str[i];
+              
+                if(charCount[char])
+                {
+                    charCount[char]++
+                }
+                else{
+                    charCount[char]=1
+                }
+            }
+              
+           
+           for(let i=0;i<str.length;i++)
+           {
+            if(charCount[str[i]]===1)
+              {
+                console.log(str[i]);
+                return str[i];
+              }
+           }
+           console.log("No non repeated character found");
+           return null;
+        }
+        nonRepeatedCharacter("programming");
+        nonRepeatedCharacter("boom");
+        nonRepeatedCharacter("nana");
+        nonRepeatedCharacter("bob");
+    </script>
+</body>
+</html>

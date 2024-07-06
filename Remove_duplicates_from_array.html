@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove duplicates from array</title>
+</head>
+<body>
+    <!-- Implement a function to remove duplicates from an array. -->
+    <h2>Remove duplicates from array</h2>
+    <script>
+        function removeDuplicates(arr)
+        {
+           console.log("given array:",arr);
+           console.log("After removing duplicates")
+           for(let i=0;i<arr.length;i++)
+           {
+            count=0
+            for(let j=0;j<arr.length;j++)
+            {
+              if(arr[i]===arr[j])
+              {
+                count++;
+              }
+            }
+            if(count===1)
+            {
+                console.log(arr[i])
+            }
+           }
+        }
+        removeDuplicates([2,1,2,3,4,8,1,6,5,4,3,3,5,8]);
+        removeDuplicates([2,1,2,4,4,8,1,1]);
+        removeDuplicates([2,1,2,1,0,0]);
+        removeDuplicates(['f','k','o','i','o','f','j']);
+        removeDuplicates(["teena","meena","seena","teena","meena","seena"]);
+    </script>
+</body>
+</html>

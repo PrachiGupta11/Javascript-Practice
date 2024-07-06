@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of all array numbers</title>
+</head>
+<body>
+    <!-- Implement a function to find the sum of all the numbers in an array -->
+    <h2>Sum of all array numbers</h2>
+    <script>
+        function addArrayNumbers(arr)
+        {
+            let sum=0;
+           for(let i=0;i<arr.length;i++)    // arr.length tab lagana hota hai jab hum equal sign nhi lgate or arr.length-1 tab dena hota  hai jab hum equal sign lgate hai loop mein
+           {
+              sum = sum+arr[i]
+           }
+           console.log("Given array is:",arr)
+           console.log("sum of all array numbers will be:",sum);
+        }
+        addArrayNumbers([54,3,8,1,9]);
+        addArrayNumbers([54,93,80,1,2]);
+    </script>
+</body>
+</html>
